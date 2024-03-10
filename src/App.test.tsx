@@ -1,10 +1,12 @@
 import { render, screen } from '@testing-library/react';
+import { describe, expect, test } from 'vitest';
 import App from './App';
-import { expect, test } from 'vitest';
 
-test('renders Yum Burger logo', () => {
-  render(<App />);
+describe('App', () => {
+  test('Render Yum Burger logo', () => {
+    render(<App />);
 
-  const linkElement = screen.getByAltText(/Yum Burger logo/i);
-  expect(linkElement).toBeInTheDocument();
+    const linkElement = screen.getByAltText(/Yum Burger logo/i);
+    expect(linkElement).toBeInTheDocument();
+  });
 });
