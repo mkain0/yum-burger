@@ -4,9 +4,7 @@ import { Image } from 'react-bootstrap';
 
 function App() {
   return (
-    <>
-      <Image src={yumBurgerLogo} className='logo' alt='Yum Burger logo' />
-    </>
+      <Image src={yumBurgerLogo} className='logo' alt='Yum Burger logo'/>
   );
 }
 

@@ -1,0 +1,16 @@
+.img-rounder {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+  margin-top: 5px;
+  transform: scale(1.5);
+  padding: 10px;
+}

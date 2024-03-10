@@ -1,4 +1,5 @@
 import { Form, Image } from 'react-bootstrap';
+import './Topping.css';
 
 type ToppingProps = {
   name: string;
@@ -6,13 +7,11 @@ type ToppingProps = {
   image: string;
 };
 
-function Topping(props: ToppingProps) {
+function Topping(props: Readonly<ToppingProps>) {
   return (
     <>
-      <p>{props.name}</p>
-      <Image src={`${props.image}`} alt={`${props.name} image`} />
-      <p>{props.price}$</p>
-      <Form.Check aria-label={`${props.name} option`} />
+      <Image src={`${props.image}`} alt={`${props.name} image`} thumbnail className='img-rounder' />
+      <Form.Check label={`${props.name} $ ${props.price}`} aria-label={`${props.name} option`} />
     </>
   );
 }

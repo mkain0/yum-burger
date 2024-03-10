@@ -15,7 +15,7 @@ describe('Topping', () => {
     // @ts-expect-error alt is not a valid property of HTMLElement
     expect(imageElement.alt).toEqual('Onion image');
 
-    const priceElement = screen.getByText('0.5$');
+    const priceElement = screen.getByText(/0.5/i);
     expect(priceElement).toBeInTheDocument();
 
     const checkboxElement = screen.getByRole('checkbox');
