@@ -1,10 +1,11 @@
-import yumBurgerLogo from './assets/yum-burger-logo.svg';
-import './App.css';
-import { Image } from 'react-bootstrap';
+import { Route, Routes } from 'react-router-dom';
+import Welcome from './pages/Welcome/Welcome.tsx';
 
 function App() {
   return (
-      <Image src={yumBurgerLogo} className='logo' alt='Yum Burger logo'/>
+    <Routes>
+      <Route path='/' element={<Welcome />} />
+    </Routes>
   );
 }
 

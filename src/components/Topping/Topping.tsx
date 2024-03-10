@@ -10,8 +10,16 @@ type ToppingProps = {
 function Topping(props: Readonly<ToppingProps>) {
   return (
     <>
-      <Image src={`${props.image}`} alt={`${props.name} image`} thumbnail className='img-rounder' />
-      <Form.Check label={`${props.name} $ ${props.price}`} aria-label={`${props.name} option`} />
+      <Image
+        src={`${props.image}`}
+        alt={`${props.name} image`}
+        thumbnail
+        className='img-rounder'
+      />
+      <Form.Check
+        label={`${props.name} $ ${props.price}`}
+        aria-label={`${props.name} option`}
+      />
     </>
   );
 }
