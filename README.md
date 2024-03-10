@@ -26,7 +26,7 @@ It allows users to customize and order craft burgers online.
 
 ## Usage
 
-1. Visit `http://localhost:5173/` in your web browser.
+1. Visit `http://localhost:5174/` in your web browser.
 2. Explore the different burger options and customize your own.
 3. Place an order and enjoy your craft burger!
 
