@@ -1,11 +1,10 @@
-import { render, screen } from '@testing-library/react';
-import userEvent from "@testing-library/user-event";
+import { fireEvent, render, screen } from '@testing-library/react';
 import { describe, expect, test } from 'vitest';
 import Topping from './Topping';
 
 describe('Topping', () => {
   test('Render Topping component', () => {
-    render(<Topping />);
+    render(<Topping name='Onion' price={0.5} image='onion.jpg' />);
 
     const typeElement = screen.getByText(/Onion/i);
     expect(typeElement).toBeInTheDocument();
@@ -13,7 +12,7 @@ describe('Topping', () => {
     const imageElement = screen.getByRole('img');
     expect(imageElement).toBeInTheDocument();
 
-    // @ts-ignore
+    // @ts-expect-error alt is not a valid property of HTMLElement
     expect(imageElement.alt).toEqual('Onion image');
 
     const priceElement = screen.getByText('0.5$');
@@ -25,15 +24,13 @@ describe('Topping', () => {
   });
 
   test('Check Topping checkbox', () => {
-    const user = userEvent.setup();
-
-    render(<Topping />);
+    render(<Topping name='Onion' price={0.5} image='onion.jpg' />);
 
     const checkboxElement = screen.getByRole('checkbox');
     expect(checkboxElement).toBeInTheDocument();
     expect(checkboxElement).not.toBeChecked();
 
-    user.click(checkboxElement);
+    fireEvent.click(checkboxElement);
     expect(checkboxElement).toBeChecked();
   });
 });

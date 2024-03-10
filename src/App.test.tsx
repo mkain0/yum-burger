@@ -6,7 +6,7 @@ describe('App', () => {
   test('Render Yum Burger logo', () => {
     render(<App />);
 
-    const linkElement = screen.getByAltText(/Yum Burger logo/i);
-    expect(linkElement).toBeInTheDocument();
+    const logoElement = screen.getByAltText(/Yum Burger logo/i);
+    expect(logoElement).toBeInTheDocument();
   });
 });
